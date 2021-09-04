@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding.recycler.adapter=AppBarImageAdapter()
         binding.recyclerCategory.adapter=categoriesAdapter
         categoriesAdapter.submitList(listOfCategories)
+        binding.recyclerPizza.adapter=PizzaAdapter()
     }
 
 }

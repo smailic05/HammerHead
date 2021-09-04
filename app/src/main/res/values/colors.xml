@@ -10,4 +10,5 @@
     <color name="brand_primary">#3E50B4</color>
     <color name="fuchsia">#FD3A69</color>
     <color name="inactive">#C3C4C9</color>
+    <color name="transparent_fuchsia">#33FD3A69</color>
 </resources>

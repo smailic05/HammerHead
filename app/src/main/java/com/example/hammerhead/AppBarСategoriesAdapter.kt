@@ -8,12 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hammerhead.databinding.CategoriesItemBinding
 
 class AppBarCategoriesAdapter: ListAdapter<String, AppBarCategoriesAdapter.ViewHolder>(itemComparator) {
+    var selectedPos=0
     inner class ViewHolder(private val binding: CategoriesItemBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(category: String){
-            binding.button.text=category
-            binding.button.setOnClickListener {
-                binding.button.isSelected = !binding.button.isSelected
+            binding.category.text=category
+            binding.category.isSelected = bindingAdapterPosition==selectedPos
+            binding.category.setOnClickListener {
+                notifyItemChanged(selectedPos)
+                selectedPos=bindingAdapterPosition
+                notifyItemChanged(selectedPos)
             }
         }
     }
