@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fastfood"
+        android:icon="@drawable/ic_baseline_fastfood_24"
+        android:title="fastfood" />
+    <item android:id="@+id/person"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="person" />
+    <item android:id="@+id/cart"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="cart" />
+</menu>

@@ -51,4 +51,13 @@
         <item>Васька</item>
         <item>Рыжик</item>
     </string-array>
+    <string-array name="categories">
+        <item>Пицца</item>
+        <item>Комбо</item>
+        <item>Десерты</item>
+        <item>Напитки</item>
+        <item>Напитки</item>
+        <item>Напитки</item>
+        <item>Напитки</item>
+    </string-array>
 </resources>

@@ -10,7 +10,7 @@ class AppBarImageAdapter: RecyclerView.Adapter<AppBarImageAdapter.ViewHolder>() 
     inner class ViewHolder(private val binding: ImageBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(){
-            binding.imageView.load("https://grafkrasnov.ru/wp-content/uploads/2019/07/3_tradicii_za_1099.jpg")
+            binding.imageView.setImageResource(R.drawable.banner)
         }
     }
 

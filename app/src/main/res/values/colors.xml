@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="brand_primary">#3E50B4</color>
+    <color name="fuchsia">#FD3A69</color>
+    <color name="inactive">#C3C4C9</color>
 </resources>
