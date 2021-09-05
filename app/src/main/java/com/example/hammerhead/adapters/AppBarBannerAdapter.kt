@@ -1,12 +1,12 @@
-package com.example.hammerhead
+package com.example.hammerhead.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
+import com.example.hammerhead.R
 import com.example.hammerhead.databinding.ImageBinding
 
-class AppBarImageAdapter: RecyclerView.Adapter<AppBarImageAdapter.ViewHolder>() {
+class AppBarBannerAdapter: RecyclerView.Adapter<AppBarBannerAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: ImageBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(){

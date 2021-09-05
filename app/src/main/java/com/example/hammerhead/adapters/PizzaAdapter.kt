@@ -1,15 +1,28 @@
-package com.example.hammerhead
+package com.example.hammerhead.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.example.hammerhead.Food
 import com.example.hammerhead.databinding.PizzaViewBinding
+import android.content.res.Resources
 
-class PizzaAdapter : RecyclerView.Adapter<PizzaAdapter.ViewHolder>() {
+
+
+
+class PizzaAdapter(var food: Food) : RecyclerView.Adapter<PizzaAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: PizzaViewBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(){
-            binding.imagePizza.setImageResource(R.drawable.buffalo)
+
+            val position=bindingAdapterPosition
+            val meal =food.meals[position]
+            binding.imagePizza.load(meal.mealImage)
+            binding.title.text=meal.title
+            val placeholder = "${meal.firstIngredient}, ${meal.secondIngredient}, " +
+                    "${meal.thirdIngredient}, ${meal.fourthIngredient}, ${meal.fifthIngredient}"
+            binding.description.text=placeholder
         }
     }
 
@@ -23,6 +36,6 @@ class PizzaAdapter : RecyclerView.Adapter<PizzaAdapter.ViewHolder>() {
         holder.bind()
     }
 
-    override fun getItemCount() = 100
+    override fun getItemCount() = food.meals.size
 
 }

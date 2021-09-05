@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/categories_rectangle" android:color="@color/transparent_fuchsia" android:state_selected="true"  />
-    <item android:drawable="@drawable/categories_rectangle"  android:color="@color/white" />
-</selector>

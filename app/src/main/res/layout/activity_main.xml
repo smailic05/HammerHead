@@ -10,11 +10,11 @@
         android:layout_height="?attr/actionBarSize">
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_marginStart="16dp"
-            android:entries="@array/catNames" />
+            android:entries="@array/cityNames" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +68,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerPizza"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/pizza_view"
+            android:layout_marginBottom="40dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
