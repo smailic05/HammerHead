@@ -6,9 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.hammerhead.Food
 import com.example.hammerhead.databinding.PizzaViewBinding
-import android.content.res.Resources
-
-
+import coil.network.HttpException
+import com.example.hammerhead.R
 
 
 class PizzaAdapter(var food: Food) : RecyclerView.Adapter<PizzaAdapter.ViewHolder>() {
@@ -18,7 +17,11 @@ class PizzaAdapter(var food: Food) : RecyclerView.Adapter<PizzaAdapter.ViewHolde
 
             val position=bindingAdapterPosition
             val meal =food.meals[position]
-            binding.imagePizza.load(meal.mealImage)
+            try {
+                binding.imagePizza.load(meal.mealImage)
+            }catch (exception:Exception) {
+                binding.imagePizza.load(R.drawable.no_image)
+            }
             binding.title.text=meal.title
             val placeholder = "${meal.firstIngredient}, ${meal.secondIngredient}, " +
                     "${meal.thirdIngredient}, ${meal.fourthIngredient}, ${meal.fifthIngredient}"

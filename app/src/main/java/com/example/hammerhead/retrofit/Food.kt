@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName
 data class Food(
 
 	@field:SerializedName("meals")
-	val meals:List<MealsItem>
+	val meals:List<RetrofitMealsItem>
 )
 
-data class MealsItem(
+data class RetrofitMealsItem(
 
 	@field:SerializedName("strIngredient1")
 	val firstIngredient: String,
@@ -30,6 +30,5 @@ data class MealsItem(
 
 	@field:SerializedName("strMeal")
 	val title: String,
-
 
 )
