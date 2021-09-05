@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        if(false){
+        if(isNetworkConnected()){
             viewModel.foodItem.observe(this,{
                 viewModel.saveToDatabase()
                 binding.recyclerPizza.adapter= PizzaAdapter(it)
